@@ -3,13 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>PRUTHVIRAJ NIKAM</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -28,7 +25,6 @@ min-height:100vh;
 padding:20px;
 }
 
-/* BACKGROUND */
 .bg{
 position:fixed;
 width:100%;
@@ -42,7 +38,6 @@ linear-gradient(135deg,#060b18,#0b1220,#111827);
 z-index:-2;
 }
 
-/* GLOW */
 .glow{
 position:fixed;
 width:350px;
@@ -55,7 +50,6 @@ right:-120px;
 z-index:-1;
 }
 
-/* CARD */
 .card{
 width:100%;
 max-width:420px;
@@ -68,7 +62,6 @@ text-align:center;
 box-shadow:0 15px 40px rgba(0,0,0,0.45);
 }
 
-/* PROFILE IMAGE */
 .profile-wrap{
 display:flex;
 justify-content:center;
@@ -91,7 +84,6 @@ object-fit:cover;
 display:block;
 }
 
-/* TITLE */
 .title{
 font-size:28px;
 font-weight:800;
@@ -101,15 +93,6 @@ background:linear-gradient(90deg,#00ffd5,#00aaff);
 -webkit-text-fill-color:transparent;
 }
 
-/* SUBTITLE */
-.subtitle{
-margin-top:10px;
-font-size:15px;
-line-height:1.6;
-color:#d7def7;
-}
-
-/* COUNTER */
 .counter{
 margin-top:15px;
 font-size:14px;
@@ -117,7 +100,6 @@ font-weight:600;
 color:#00ffd5;
 }
 
-/* FEATURES */
 .features{
 margin-top:24px;
 display:flex;
@@ -140,20 +122,25 @@ transform:translateY(-2px);
 background:rgba(255,255,255,0.08);
 }
 
-/* BUTTON */
 .join-btn{
-display:block;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
 margin-top:28px;
-padding:17px;
+padding:16px 12px;
 border-radius:18px;
 text-decoration:none;
-font-size:18px;
+font-size:16px;
 font-weight:800;
 background:linear-gradient(90deg,#00ffd5,#00aaff);
 color:#001018;
 transition:0.3s;
 box-shadow:0 0 25px rgba(0,255,213,0.3);
 animation:pulse 2s infinite;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
 }
 
 .join-btn:hover{
@@ -166,24 +153,12 @@ transform:scale(1.03);
 100%{transform:scale(1);}
 }
 
-/* TRUST TEXT */
 .trust{
 margin-top:16px;
 font-size:13px;
 color:#b8c2d9;
 }
 
-/* DISCLAIMER */
-.disclaimer{
-margin-top:22px;
-font-size:11px;
-line-height:1.7;
-color:#97a3c6;
-padding-top:18px;
-border-top:1px solid rgba(255,255,255,0.08);
-}
-
-/* FOOTER */
 .footer{
 margin-top:18px;
 }
@@ -194,9 +169,7 @@ color:#00ffd5;
 text-decoration:none;
 }
 
-/* MOBILE */
 @media(max-width:480px){
-
 .title{
 font-size:24px;
 }
@@ -210,51 +183,15 @@ width:115px;
 height:115px;
 }
 
+.join-btn{
+font-size:14px;
+padding:15px 10px;
 }
-
+}
 </style>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{
-if(f.fbq)return;
-n=f.fbq=function(){
-n.callMethod ?
-n.callMethod.apply(n,arguments) : n.queue.push(arguments)
-};
-
-if(!f._fbq)f._fbq=n;
-
-n.push=n;
-n.loaded=!0;
-n.version='2.0';
-n.queue=[];
-
-t=b.createElement(e);
-t.async=!0;
-t.src=v;
-
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s);
-
-}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '1735887810777551');
-fbq('track', 'PageView');
-</script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1735887810777551&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-
 </head>
 
 <body>
-
 <div class="bg"></div>
 <div class="glow"></div>
 
@@ -262,7 +199,7 @@ src="https://www.facebook.com/tr?id=1735887810777551&ev=PageView&noscript=1"/>
 
 <div class="profile-wrap">
 <div class="profile">
-<img src="profile.jpg" alt="PRUTHVIRAJ NIKAM">
+<img src="profile.jgp" alt="PRUTHVIRAJ NIKAM">
 </div>
 </div>
 
@@ -275,31 +212,14 @@ PRUTHVIRAJ NIKAM
 </div>
 
 <div class="features">
-
-<div class="feature">
-📘 Educational Market Learning Content
+<div class="feature">📘 Educational Market Learning Content</div>
+<div class="feature">📊 Daily Financial Awareness Updates</div>
+<div class="feature">🎯 Beginner Friendly Community</div>
+<div class="feature">🚫 No Guaranteed Returns or Investment Advice</div>
 </div>
 
-<div class="feature">
-📊 Daily Financial Awareness Updates
-</div>
-
-<div class="feature">
-🎯 Beginner Friendly Community
-</div>
-
-<div class="feature">
-🚫 No Guaranteed Returns or Investment Advice
-</div>
-
-</div>
-
-<a class="join-btn"
-href="https://telegram.me/+QKR9vZigX4liMGE1"
-target="_blank">
-
+<a class="join-btn" href="#">
 🚀 JOIN TELEGRAM COMMUNITY
-
 </a>
 
 <div class="trust">
@@ -307,12 +227,11 @@ Trusted Educational Community
 </div>
 
 <div class="footer">
-<a href="https://t.me/adsrankmedia" target="_blank">
+<a href="#">
 Advertised by AdRank Media
 </a>
 </div>
 
 </div>
-
 </body>
 </html>
