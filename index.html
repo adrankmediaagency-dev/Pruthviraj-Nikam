@@ -3,19 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>PRUTHVIRAJ NIKAM</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0d1117;
-color:#ffffff;
+font-family:'Poppins',sans-serif;
+background:#0b0f19;
+color:#fff;
+overflow-x:hidden;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -23,132 +28,298 @@ min-height:100vh;
 padding:20px;
 }
 
+/* BACKGROUND */
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background:
+radial-gradient(circle at top left,#1e3c72 0%,transparent 30%),
+radial-gradient(circle at bottom right,#00c6a7 0%,transparent 25%),
+linear-gradient(135deg,#060b18,#0b1220,#111827);
+z-index:-2;
+}
+
+/* GLOW */
+.glow{
+position:fixed;
+width:350px;
+height:350px;
+background:#00ffd5;
+filter:blur(140px);
+opacity:0.08;
+top:-120px;
+right:-120px;
+z-index:-1;
+}
+
+/* CARD */
 .card{
 width:100%;
 max-width:420px;
-background:#161b22;
-border-radius:24px;
-padding:30px 24px;
-text-align:center;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(14px);
 border:1px solid rgba(255,255,255,0.08);
-box-shadow:0 20px 60px rgba(0,0,0,0.4);
+border-radius:28px;
+padding:30px 22px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,0.45);
+}
+
+/* PROFILE IMAGE */
+.profile-wrap{
+display:flex;
+justify-content:center;
 }
 
 .profile{
-width:120px;
-height:120px;
+width:130px;
+height:130px;
+padding:4px;
 border-radius:50%;
-overflow:hidden;
-margin:auto;
-border:3px solid #2ea043;
+background:linear-gradient(135deg,#00ffd5,#00aaff);
+box-shadow:0 0 25px rgba(0,255,213,0.35);
 }
 
 .profile img{
 width:100%;
 height:100%;
+border-radius:50%;
 object-fit:cover;
+display:block;
 }
 
-h1{
-margin-top:18px;
+/* TITLE */
+.title{
 font-size:28px;
-font-weight:700;
+font-weight:800;
+margin-top:18px;
+background:linear-gradient(90deg,#00ffd5,#00aaff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
+/* SUBTITLE */
 .subtitle{
 margin-top:10px;
-font-size:14px;
-line-height:1.7;
-color:#c9d1d9;
+font-size:15px;
+line-height:1.6;
+color:#d7def7;
 }
 
+/* COUNTER */
+.counter{
+margin-top:15px;
+font-size:14px;
+font-weight:600;
+color:#00ffd5;
+}
+
+/* FEATURES */
 .features{
 margin-top:24px;
-text-align:left;
+display:flex;
+flex-direction:column;
+gap:14px;
 }
 
-.features div{
-background:#21262d;
+.feature{
+background:rgba(255,255,255,0.05);
 padding:14px;
-margin-bottom:12px;
-border-radius:12px;
+border-radius:16px;
 font-size:14px;
-}
-
-.button{
-display:block;
-margin-top:24px;
-background:#2ea043;
-color:#fff;
-text-decoration:none;
-padding:16px;
-border-radius:14px;
-font-weight:600;
+font-weight:500;
+border:1px solid rgba(255,255,255,0.06);
 transition:0.3s;
 }
 
-.button:hover{
-opacity:0.92;
+.feature:hover{
+transform:translateY(-2px);
+background:rgba(255,255,255,0.08);
 }
 
+/* BUTTON */
+.join-btn{
+display:block;
+margin-top:28px;
+padding:17px;
+border-radius:18px;
+text-decoration:none;
+font-size:18px;
+font-weight:800;
+background:linear-gradient(90deg,#00ffd5,#00aaff);
+color:#001018;
+transition:0.3s;
+box-shadow:0 0 25px rgba(0,255,213,0.3);
+animation:pulse 2s infinite;
+}
+
+.join-btn:hover{
+transform:scale(1.03);
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.03);}
+100%{transform:scale(1);}
+}
+
+/* TRUST TEXT */
+.trust{
+margin-top:16px;
+font-size:13px;
+color:#b8c2d9;
+}
+
+/* DISCLAIMER */
 .disclaimer{
 margin-top:22px;
 font-size:11px;
 line-height:1.7;
-color:#8b949e;
+color:#97a3c6;
+padding-top:18px;
+border-top:1px solid rgba(255,255,255,0.08);
 }
 
+/* FOOTER */
 .footer{
 margin-top:18px;
-font-size:12px;
 }
 
 .footer a{
-color:#58a6ff;
+font-size:12px;
+color:#00ffd5;
 text-decoration:none;
-margin:0 8px;
 }
+
+/* MOBILE */
+@media(max-width:480px){
+
+.title{
+font-size:24px;
+}
+
+.card{
+padding:25px 18px;
+}
+
+.profile{
+width:115px;
+height:115px;
+}
+
+}
+
 </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod ?
+n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+};
+
+if(!f._fbq)f._fbq=n;
+
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
+
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1735887810777551');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1735887810777551&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 </head>
+
 <body>
+
+<div class="bg"></div>
+<div class="glow"></div>
 
 <div class="card">
 
+<div class="profile-wrap">
 <div class="profile">
-<div class="profile">
-<img src="profile.jgp" alt="Community Profile">
+<img src="profile.jpg" alt="PRUTHVIRAJ NIKAM">
+</div>
 </div>
 
-<h1>PRUTHVIRAJ NIKAM</h1>
+<div class="title">
+PRUTHVIRAJ NIKAM
+</div>
+
+<div class="subtitle">
+Learn Smart • Stay Updated • Build Financial Awareness 🚀
+</div>
+
+<div class="counter">
+👥 2,300+ Community Members
+</div>
 
 <div class="features">
 
-<div>
-📘 Beginner Friendly Learning
+<div class="feature">
+📘 Educational Market Learning Content
 </div>
 
-<div>
-📊 Educational Market Discussions
+<div class="feature">
+📊 Daily Financial Awareness Updates
 </div>
 
-<div>
-🧠 Trading Psychology & Discipline
+<div class="feature">
+🎯 Beginner Friendly Community
 </div>
 
-<div>
-⚠️ No Financial Advice or Profit Guarantees
+<div class="feature">
+🚫 No Guaranteed Returns or Investment Advice
 </div>
 
 </div>
 
-<a class="button" href="https://telegram.me/+QKR9vZigX4liMGE1">
-Join Community
+<a class="join-btn"
+href="https://telegram.me/+QKR9vZigX4liMGE1"
+target="_blank">
+
+🚀 JOIN TELEGRAM COMMUNITY
+
 </a>
 
+<div class="trust">
+Trusted Educational Community
+</div>
+
 <div class="disclaimer">
-Trading and investing involve risk.<br>
-This platform is only for educational and informational purposes.<br>
-We do not provide investment advice, trading signals, or guaranteed returns.
+This platform is only for educational and informational purposes.  
+We do not provide financial, investment, or trading advice.  
+No profit or income guarantees are made.
+</div>
+
+<div class="footer">
+<a href="https://t.me/adsrankmedia" target="_blank">
+Advertised by AdRank Media
+</a>
 </div>
 
 </div>
