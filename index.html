@@ -39,7 +39,7 @@ body{
   border:1px solid rgba(255,255,255,0.05);
 }
 
-/* PROFILE AVATAR */
+/* PROFILE IMAGE */
 .profile{
   width:130px;
   height:130px;
@@ -47,32 +47,15 @@ body{
   border-radius:50%;
   padding:5px;
   background:linear-gradient(135deg,#ff7a18,#ffb347);
-  display:flex;
-  align-items:center;
-  justify-content:center;
 }
 
-.profile .avatar{
+.profile img{
   width:100%;
   height:100%;
   border-radius:50%;
+  object-fit:cover;
+  display:block;
   background:#1a1d22;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:42px;
-  font-weight:700;
-  letter-spacing:1px;
-  background:linear-gradient(135deg,#262a31,#15171b);
-  background-clip:text;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.profile .avatar{
-  -webkit-text-fill-color:#ffb347;
-  color:#ffb347;
-  background:none;
 }
 
 /* NAME */
@@ -201,9 +184,6 @@ h1{
     width:108px;
     height:108px;
   }
-  .profile .avatar{
-    font-size:34px;
-  }
 }
 </style>
 <!-- Meta Pixel Code -->
@@ -222,8 +202,7 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=947258255001090&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code -->
-	
+<!-- End Meta Pixel Code -->	
 </head>
 
 <body>
@@ -231,7 +210,8 @@ src="https://www.facebook.com/tr?id=947258255001090&ev=PageView&noscript=1"
 <div class="wrapper">
 
   <div class="profile">
-    <div class="profile.jpg">PN</div>
+    <!-- Replace the src below with your own photo URL or uploaded image path -->
+    <img src="profile.jpg" alt="Pruthviraj Nikam">
   </div>
 
   <h1>PRUTHVIRAJ NIKAM</h1>
